@@ -11,7 +11,6 @@
     --gold-light: #DAA520;
     --gold-dim: #c9a84c;
     --bg: #f5f4f0;
-    --bg2: #eeede8;
     --surface: #ffffff;
     --surface2: #f9f8f5;
     --border: #e2ddd5;
@@ -33,7 +32,6 @@
     line-height: 1.5;
   }
 
-  /* HERO */
   .hero {
     background: linear-gradient(160deg, #1a1228 0%, #2a1f40 50%, #1a1228 100%);
     border-bottom: 3px solid var(--gold-dim);
@@ -50,7 +48,6 @@
     pointer-events: none;
   }
   .hero-sub {
-    font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 11px;
     letter-spacing: 4px;
@@ -68,17 +65,10 @@
     margin-bottom: 4px;
   }
   .hero h1 span { color: var(--gold-dim); }
-  .hero-dates {
-    font-size: 13px;
-    color: #9b9680;
-    letter-spacing: 2px;
-    margin-top: 8px;
-  }
+  .hero-dates { font-size: 13px; color: #9b9680; letter-spacing: 2px; margin-top: 8px; }
 
-  /* GROUP TOGGLE */
   .group-toggle {
     display: flex;
-    gap: 0;
     margin: 20px 16px 0;
     background: var(--surface);
     border-radius: 10px;
@@ -100,23 +90,10 @@
     background: transparent;
     color: var(--text-muted);
   }
-  .group-btn.active-A {
-    background: var(--groupA);
-    color: #fff;
-    box-shadow: 0 2px 12px rgba(42,127,212,0.35);
-  }
-  .group-btn.active-B {
-    background: var(--groupB);
-    color: #fff;
-    box-shadow: 0 2px 12px rgba(46,158,79,0.35);
-  }
-  .group-btn.all-active {
-    background: var(--gold);
-    color: #fff;
-    box-shadow: 0 2px 12px rgba(184,134,11,0.35);
-  }
+  .group-btn.active-A { background: var(--groupA); color: #fff; box-shadow: 0 2px 12px rgba(42,127,212,0.35); }
+  .group-btn.active-B { background: var(--groupB); color: #fff; box-shadow: 0 2px 12px rgba(46,158,79,0.35); }
+  .group-btn.all-active { background: var(--gold); color: #fff; box-shadow: 0 2px 12px rgba(184,134,11,0.35); }
 
-  /* HOTEL CARD */
   .hotel-strip {
     margin: 16px 16px 0;
     background: var(--surface);
@@ -127,41 +104,16 @@
     gap: 12px;
     align-items: stretch;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
   }
-  .hotel-item {
-    flex: 1;
-    min-width: 0;
-    transition: all 0.3s ease;
-  }
+  .hotel-item { flex: 1; min-width: 0; }
   .hotel-item.hidden-hotel { display: none; }
-  .hotel-label {
-    font-size: 9px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-    font-weight: 700;
-  }
+  .hotel-label { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; font-weight: 700; }
   .hotel-label.a { color: var(--groupA); }
   .hotel-label.b { color: var(--groupB); }
-  .hotel-name {
-    font-family: 'Cinzel', serif;
-    font-size: 12px;
-    color: var(--text);
-    margin-bottom: 2px;
-  }
-  .hotel-addr {
-    font-size: 10px;
-    color: var(--text-muted);
-    line-height: 1.4;
-  }
-  .hotel-divider {
-    width: 1px;
-    background: var(--border);
-    align-self: stretch;
-  }
+  .hotel-name { font-family: 'Cinzel', serif; font-size: 12px; color: var(--text); margin-bottom: 2px; }
+  .hotel-addr { font-size: 10px; color: var(--text-muted); line-height: 1.4; }
+  .hotel-divider { width: 1px; background: var(--border); align-self: stretch; }
 
-  /* DAY NAV */
   .day-nav {
     display: flex;
     gap: 8px;
@@ -185,21 +137,9 @@
     letter-spacing: 0.5px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   }
-  .day-chip.active {
-    background: var(--gold);
-    color: #fff;
-    border-color: var(--gold);
-    box-shadow: 0 2px 10px rgba(184,134,11,0.3);
-  }
-  .day-chip .chip-sub {
-    font-size: 9px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    display: block;
-    margin-top: 1px;
-  }
+  .day-chip.active { background: var(--gold); color: #fff; border-color: var(--gold); box-shadow: 0 2px 10px rgba(184,134,11,0.3); }
+  .day-chip .chip-sub { font-size: 9px; font-weight: 300; letter-spacing: 1px; display: block; margin-top: 1px; }
 
-  /* CONTENT */
   .content {
     padding: 16px;
     display: flex;
@@ -207,13 +147,7 @@
     gap: 16px;
   }
 
-  /* DAY HEADER */
-  .day-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 4px;
-  }
+  .day-header { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
   .day-number {
     font-family: 'Cinzel', serif;
     font-size: 40px;
@@ -225,20 +159,9 @@
     text-align: right;
     flex-shrink: 0;
   }
-  .day-info h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--text);
-  }
-  .day-info .day-date {
-    font-size: 11px;
-    color: var(--text-muted);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
+  .day-info h2 { font-family: 'Cinzel', serif; font-size: 18px; font-weight: 600; color: var(--text); }
+  .day-info .day-date { font-size: 11px; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; }
 
-  /* EVENT BLOCKS */
   .event-block {
     background: var(--surface);
     border-radius: var(--radius);
@@ -266,75 +189,59 @@
     background: var(--surface);
   }
   .block-header:hover { background: var(--surface2); }
-  .block-time {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--gold);
-    min-width: 60px;
-    flex-shrink: 0;
-    font-variant-numeric: tabular-nums;
-  }
-  .block-title {
-    flex: 1;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--text);
-  }
-  .block-badge {
-    font-size: 9px;
-    letter-spacing: 1px;
-    font-weight: 700;
-    padding: 2px 7px;
-    border-radius: 10px;
-    flex-shrink: 0;
-  }
+  .block-time { font-size: 13px; font-weight: 700; color: var(--gold); min-width: 60px; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+  .block-title { flex: 1; font-size: 14px; font-weight: 700; color: var(--text); }
+  .block-badge { font-size: 9px; letter-spacing: 1px; font-weight: 700; padding: 2px 7px; border-radius: 10px; flex-shrink: 0; }
   .badge-A { background: rgba(42,127,212,0.12); color: var(--groupA); border: 1px solid rgba(42,127,212,0.25); }
   .badge-B { background: rgba(46,158,79,0.12); color: var(--groupB); border: 1px solid rgba(46,158,79,0.25); }
   .badge-all { background: rgba(184,134,11,0.1); color: var(--gold); border: 1px solid rgba(184,134,11,0.25); }
   .badge-prayer { background: rgba(140,80,200,0.1); color: #7b44b8; border: 1px solid rgba(140,80,200,0.25); }
 
-  .block-chevron {
-    font-size: 11px;
-    color: var(--text-muted);
-    transition: transform 0.2s;
-    flex-shrink: 0;
-  }
+  .block-chevron { font-size: 11px; color: var(--text-muted); transition: transform 0.2s; flex-shrink: 0; }
   .event-block.open .block-chevron { transform: rotate(180deg); }
 
   .block-body {
     display: none;
-    padding: 0 14px 14px;
+    padding: 0 14px 12px;
     border-top: 1px solid var(--border);
     background: var(--surface2);
   }
   .event-block.open .block-body { display: block; }
 
+  /* Period label (AM / PM) */
+  .period-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 10px 0 4px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2px;
+  }
+
   .detail-row {
     display: flex;
-    gap: 8px;
+    gap: 10px;
     align-items: flex-start;
-    padding: 7px 0;
+    padding: 6px 0;
     font-size: 13px;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid rgba(226,221,213,0.6);
   }
   .detail-row:last-child { border-bottom: none; }
   .detail-time {
     color: var(--gold);
     font-size: 12px;
-    min-width: 52px;
+    width: 46px;
+    min-width: 46px;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
-    padding-top: 1px;
     font-weight: 700;
+    line-height: 1.3;
+    align-self: flex-start;
   }
   .detail-text { color: var(--text); line-height: 1.4; }
-  .detail-note {
-    font-size: 11px;
-    color: #cc4444;
-    margin-top: 2px;
-    display: block;
-    font-weight: 700;
-  }
+  .detail-note { font-size: 11px; color: #cc4444; margin-top: 2px; display: block; font-weight: 700; }
 
   /* SPLIT BLOCK */
   .split-block {
@@ -358,37 +265,18 @@
     gap: 6px;
     background: var(--surface2);
   }
-  .split-header::before {
-    content: '';
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--gold-dim);
-  }
+  .split-header::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--gold-dim); }
   .split-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
     border-top: 1px solid var(--border);
-    transition: grid-template-columns 0.3s ease;
   }
-  .split-cols.single-col {
-    grid-template-columns: 1fr;
-  }
-  .split-col {
-    padding: 12px;
-    transition: all 0.3s ease;
-  }
+  .split-cols.single-col { grid-template-columns: 1fr; }
+  .split-col { padding: 12px; }
   .split-col.hidden-col { display: none; }
-  .split-col:first-child {
-    border-right: 1px solid var(--border);
-  }
-  .split-col.hidden-col + .split-col {
-    border-left: none;
-  }
-  .split-cols.single-col .split-col:first-child {
-    border-right: none;
-  }
+  .split-col:first-child { border-right: 1px solid var(--border); }
+  .split-cols.single-col .split-col:first-child { border-right: none; }
+
   .split-col-label {
     font-size: 9px;
     font-weight: 700;
@@ -401,106 +289,73 @@
   }
   .split-col-label.a { color: var(--groupA); }
   .split-col-label.b { color: var(--groupB); }
-  .split-col-label::before {
-    content: '';
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-  }
+  .split-col-label::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; }
   .split-col-label.a::before { background: var(--groupA); }
   .split-col-label.b::before { background: var(--groupB); }
+
+  /* Period label inside split */
+  .split-period {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 6px 0 3px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 4px;
+  }
 
   .split-item {
     font-size: 12px;
     color: var(--text);
     line-height: 1.4;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     display: flex;
-    gap: 6px;
+    gap: 8px;
   }
   .split-item-time {
     color: var(--gold);
     font-size: 11px;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
-    min-width: 44px;
+    width: 40px;
+    min-width: 40px;
     font-weight: 700;
+    line-height: 1.3;
+    align-self: flex-start;
   }
 
-  /* EMERGENCY & INFO */
-  .info-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 8px;
-    margin: 0 16px 16px;
-  }
-  .info-card {
-    background: var(--surface);
-    border-radius: var(--radius);
-    padding: 12px;
-    border: 1px solid var(--border);
-    text-align: center;
-    box-shadow: var(--shadow);
-  }
+  .info-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin: 0 16px 16px; }
+  .info-card { background: var(--surface); border-radius: var(--radius); padding: 12px; border: 1px solid var(--border); text-align: center; box-shadow: var(--shadow); }
   .info-card-icon { font-size: 20px; margin-bottom: 6px; }
   .info-card-label { font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px; }
   .info-card-val { font-size: 13px; font-weight: 700; color: var(--gold); }
 
-  .emergency-banner {
-    margin: 0 16px 16px;
-    background: #fff5f5;
-    border: 1px solid #ffcccc;
-    border-radius: var(--radius);
-    padding: 14px 16px;
-    box-shadow: var(--shadow);
-  }
-  .emergency-banner h3 {
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #cc3333;
-    margin-bottom: 8px;
-    font-weight: 700;
-  }
-  .emergency-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 4px;
-  }
+  .emergency-banner { margin: 0 16px 16px; background: #fff5f5; border: 1px solid #ffcccc; border-radius: var(--radius); padding: 14px 16px; box-shadow: var(--shadow); }
+  .emergency-banner h3 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #cc3333; margin-bottom: 8px; font-weight: 700; }
+  .emergency-row { display: flex; justify-content: space-between; margin-bottom: 4px; }
   .emergency-row:last-child { margin-bottom: 0; }
   .e-label { font-size: 13px; color: var(--text-muted); }
   .e-num { font-size: 16px; font-weight: 700; color: #cc3333; letter-spacing: 1px; }
 
   .hidden { display: none !important; }
-
-  .event-block:nth-child(1) { animation-delay: 0.05s; }
-  .event-block:nth-child(2) { animation-delay: 0.10s; }
-  .event-block:nth-child(3) { animation-delay: 0.15s; }
-  .event-block:nth-child(4) { animation-delay: 0.20s; }
-  .event-block:nth-child(5) { animation-delay: 0.25s; }
-  .split-block { animation-delay: 0.15s; }
-
   .bottom-spacer { height: 40px; }
 </style>
 </head>
 <body>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-sub">City Harvest Church</div>
   <h1>Prayer Week<br><span>IN SEOUL</span> 2025</h1>
   <div class="hero-dates">12 – 18 JANUARY 2025</div>
 </div>
 
-<!-- GROUP TOGGLE -->
 <div class="group-toggle">
   <button class="group-btn all-active" data-group="all" onclick="setGroup('all')">All</button>
   <button class="group-btn" data-group="A" onclick="setGroup('A')">Group A</button>
   <button class="group-btn" data-group="B" onclick="setGroup('B')">Group B</button>
 </div>
 
-<!-- HOTEL INFO -->
 <div class="hotel-strip">
   <div class="hotel-item" id="hotel-a">
     <div class="hotel-label a">Group A Hotel</div>
@@ -515,7 +370,6 @@
   </div>
 </div>
 
-<!-- DAY NAV -->
 <div class="day-nav">
   <div class="day-chip active" data-day="12" onclick="setDay('12')">12 Jan<span class="chip-sub">SUN</span></div>
   <div class="day-chip" data-day="13" onclick="setDay('13')">13 Jan<span class="chip-sub">MON</span></div>
@@ -526,7 +380,7 @@
   <div class="day-chip" data-day="18" onclick="setDay('18')">18 Jan<span class="chip-sub">SAT</span></div>
 </div>
 
-<!-- ========== DAY 12 ========== -->
+<!-- DAY 12 -->
 <div class="content day-content" data-day="12">
   <div class="day-header">
     <div class="day-number">12</div>
@@ -535,17 +389,17 @@
       <h2>Arrival Day</h2>
     </div>
   </div>
-
   <div class="event-block shared open" onclick="toggleBlock(this)">
     <div class="block-header">
-      <div class="block-time">3:00 PM</div>
+      <div class="block-time">3:00</div>
       <div class="block-title">Check-in Hotel</div>
       <span class="block-badge badge-all">ALL</span>
       <span class="block-chevron">▾</span>
     </div>
     <div class="block-body">
+      <div class="period-label">PM</div>
       <div class="detail-row">
-        <div class="detail-time">3:00 PM</div>
+        <div class="detail-time">3:00</div>
         <div class="detail-text">Check in at your assigned hotel<br>
           <span style="font-size:12px;color:var(--text-muted)">Group A → Glad Yeouido &nbsp;|&nbsp; Group B → Glad Mapo</span>
         </div>
@@ -554,7 +408,7 @@
   </div>
 </div>
 
-<!-- ========== DAY 13 ========== -->
+<!-- DAY 13 -->
 <div class="content day-content hidden" data-day="13">
   <div class="day-header">
     <div class="day-number">13</div>
@@ -566,26 +420,27 @@
 
   <div class="event-block shared open" onclick="toggleBlock(this)">
     <div class="block-header">
-      <div class="block-time">3:30 AM</div>
+      <div class="block-time">3:30</div>
       <div class="block-title">YFGC Morning Prayer</div>
       <span class="block-badge badge-prayer">PRAYER</span>
       <span class="block-chevron">▾</span>
     </div>
     <div class="block-body">
+      <div class="period-label">AM</div>
       <div class="detail-row">
-        <div class="detail-time">3:30 AM</div>
+        <div class="detail-time">3:30</div>
         <div class="detail-text">Gather at hotel lobby · Collect lanyard</div>
       </div>
       <div class="detail-row">
-        <div class="detail-time">3:45 AM</div>
+        <div class="detail-time">3:45</div>
         <div class="detail-text">Buses depart to YFGC</div>
       </div>
       <div class="detail-row">
-        <div class="detail-time">4–6:15 AM</div>
+        <div class="detail-time">4:00–<br>6:15</div>
         <div class="detail-text">Early Morning Prayer Meeting at YFGC</div>
       </div>
       <div class="detail-row">
-        <div class="detail-time">6:45 AM</div>
+        <div class="detail-time">6:45</div>
         <div class="detail-text">Buses return to hotel</div>
       </div>
     </div>
@@ -596,21 +451,23 @@
     <div class="split-cols">
       <div class="split-col col-a">
         <div class="split-col-label a">Group A · Dinner</div>
-        <div class="split-item"><span class="split-item-time">5:00 PM</span><span>Buses depart Glad Yeouido</span></div>
-        <div class="split-item"><span class="split-item-time">5:30 PM</span><span>Welcome Dinner — Heukdon-Ga Restaurant</span></div>
-        <div class="split-item"><span class="split-item-time">7:30 PM</span><span>Buses return to hotel</span></div>
+        <div class="split-period">PM</div>
+        <div class="split-item"><span class="split-item-time">5:00</span><span>Buses depart Glad Yeouido</span></div>
+        <div class="split-item"><span class="split-item-time">5:30–<br>7:30</span><span>Welcome Dinner — Heukdon-Ga</span></div>
+        <div class="split-item"><span class="split-item-time">7:30</span><span>Buses return to hotel</span></div>
       </div>
       <div class="split-col col-b">
         <div class="split-col-label b">Group B · Lunch</div>
-        <div class="split-item"><span class="split-item-time">11:30 AM</span><span>Buses depart Glad Mapo</span></div>
-        <div class="split-item"><span class="split-item-time">12–2 PM</span><span>Welcome Lunch — Heukdon-Ga Restaurant</span></div>
-        <div class="split-item"><span class="split-item-time">2:00 PM</span><span>Buses return to hotel</span></div>
+        <div class="split-period">AM → PM</div>
+        <div class="split-item"><span class="split-item-time">11:30</span><span>Buses depart Glad Mapo</span></div>
+        <div class="split-item"><span class="split-item-time">12:00–<br>2:00</span><span>Welcome Lunch — Heukdon-Ga</span></div>
+        <div class="split-item"><span class="split-item-time">2:00</span><span>Buses return to hotel</span></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ========== DAY 14 ========== -->
+<!-- DAY 14 -->
 <div class="content day-content hidden" data-day="14">
   <div class="day-header">
     <div class="day-number">14</div>
@@ -622,31 +479,32 @@
 
   <div class="event-block shared open" onclick="toggleBlock(this)">
     <div class="block-header">
-      <div class="block-time">3:30 AM</div>
+      <div class="block-time">3:30</div>
       <div class="block-title">YFGC Morning Prayer</div>
       <span class="block-badge badge-prayer">PRAYER</span>
       <span class="block-chevron">▾</span>
     </div>
     <div class="block-body">
+      <div class="period-label">AM</div>
       <div class="detail-row">
-        <div class="detail-time">3:30 AM</div>
+        <div class="detail-time">3:30</div>
         <div class="detail-text">Gather directly in assigned bus</div>
       </div>
       <div class="detail-row">
-        <div class="detail-time">3:45 AM</div>
+        <div class="detail-time">3:45</div>
         <div class="detail-text">Buses depart to YFGC</div>
       </div>
       <div class="detail-row">
-        <div class="detail-time">4–6:15 AM</div>
+        <div class="detail-time">4:00–<br>6:15</div>
         <div class="detail-text">Early Morning Prayer Meeting at YFGC</div>
       </div>
       <div class="detail-row">
-        <div class="detail-time">6:45 AM</div>
+        <div class="detail-time">6:45</div>
         <div class="detail-text">Buses return to hotel</div>
       </div>
       <div class="detail-row">
-        <div class="detail-time">8:00 AM</div>
-        <div class="detail-text">Buses depart — Group A to Prayer Mountain, Group B to DMZ
+        <div class="detail-time">8:00</div>
+        <div class="detail-text">Buses depart — Group A → Prayer Mountain · Group B → DMZ
           <span class="detail-note">⚠ Bring passport for DMZ tour</span>
         </div>
       </div>
@@ -654,55 +512,60 @@
   </div>
 
   <div class="split-block">
-    <div class="split-header">Daytime Programme (split itinerary)</div>
+    <div class="split-header">Daytime Programme</div>
     <div class="split-cols">
       <div class="split-col col-a">
         <div class="split-col-label a">Group A</div>
-        <div class="split-item"><span class="split-item-time">9–11 AM</span><span>Prayer Mountain — Dr Yonggi Cho Memorial, Burial Site, Prayer Grottos</span></div>
-        <div class="split-item"><span class="split-item-time">11–12:30</span><span>Lunch at Prayer Mountain Canteen</span></div>
-        <div class="split-item"><span class="split-item-time">12:30 PM</span><span>Buses depart to DMZ</span></div>
-        <div class="split-item"><span class="split-item-time">1–1:20 PM</span><span>Corporate Prayer at Imjingak Park</span></div>
-        <div class="split-item"><span class="split-item-time">1:30–3:30</span><span>DMZ Gondola → Camp Greaves → Imjingak Observatory</span></div>
-        <div class="split-item"><span class="split-item-time">3:30–4 PM</span><span>Imjingak Peace Park</span></div>
-        <div class="split-item"><span class="split-item-time">4–4:30 PM</span><span>Buses depart back to Prayer Mountain</span></div>
+        <div class="split-period">AM</div>
+        <div class="split-item"><span class="split-item-time">9:00–<br>11:00</span><span>Prayer Mountain — Cho Memorial, Burial Site, Grottos</span></div>
+        <div class="split-item"><span class="split-item-time">11:00–<br>12:30</span><span>Lunch at Prayer Mountain Canteen</span></div>
+        <div class="split-period">PM</div>
+        <div class="split-item"><span class="split-item-time">12:30</span><span>Buses depart to DMZ</span></div>
+        <div class="split-item"><span class="split-item-time">1:00–<br>1:20</span><span>Corporate Prayer at Imjingak Park</span></div>
+        <div class="split-item"><span class="split-item-time">1:30–<br>3:30</span><span>DMZ Gondola → Camp Greaves → Observatory</span></div>
+        <div class="split-item"><span class="split-item-time">3:30–<br>4:00</span><span>Imjingak Peace Park</span></div>
+        <div class="split-item"><span class="split-item-time">4:00–<br>4:30</span><span>Buses back to Prayer Mountain</span></div>
       </div>
       <div class="split-col col-b">
         <div class="split-col-label b">Group B</div>
-        <div class="split-item"><span class="split-item-time">9–9:20 AM</span><span>Corporate Prayer at Imjingak Park</span></div>
-        <div class="split-item"><span class="split-item-time">9:30–11:30</span><span>DMZ Gondola → Camp Greaves → Imjingak Observatory</span></div>
-        <div class="split-item"><span class="split-item-time">11:30–12</span><span>Imjingak Peace Park</span></div>
-        <div class="split-item"><span class="split-item-time">12:30 PM</span><span>Arrive at Osanri Choi-Jashil Prayer Mountain</span></div>
-        <div class="split-item"><span class="split-item-time">12:30–2</span><span>Lunch at Prayer Mountain Canteen</span></div>
-        <div class="split-item"><span class="split-item-time">2–4:30 PM</span><span>Explore Prayer Mountain — Dr Yonggi Cho Memorial, Burial Site, Prayer Grottos</span></div>
+        <div class="split-period">AM</div>
+        <div class="split-item"><span class="split-item-time">9:00–<br>9:20</span><span>Corporate Prayer at Imjingak Park</span></div>
+        <div class="split-item"><span class="split-item-time">9:30–<br>11:30</span><span>DMZ Gondola → Camp Greaves → Observatory</span></div>
+        <div class="split-item"><span class="split-item-time">11:30–<br>12:00</span><span>Imjingak Peace Park</span></div>
+        <div class="split-period">PM</div>
+        <div class="split-item"><span class="split-item-time">12:30</span><span>Arrive at Osanri Prayer Mountain</span></div>
+        <div class="split-item"><span class="split-item-time">12:30–<br>2:00</span><span>Lunch at Prayer Mountain Canteen</span></div>
+        <div class="split-item"><span class="split-item-time">2:00–<br>4:30</span><span>Explore Prayer Mountain — Cho Memorial, Burial Site, Grottos</span></div>
       </div>
     </div>
   </div>
 
   <div class="event-block shared open" onclick="toggleBlock(this)">
     <div class="block-header">
-      <div class="block-time">4:45 PM</div>
+      <div class="block-time">4:45</div>
       <div class="block-title">Combined Chapel Service</div>
       <span class="block-badge badge-all">ALL</span>
       <span class="block-chevron">▾</span>
     </div>
     <div class="block-body">
+      <div class="period-label">PM</div>
       <div class="detail-row">
-        <div class="detail-time">4:45–6:30</div>
-        <div class="detail-text">Combined Chapel Service with Pastor Kong<br><span style="color:var(--text-muted);font-size:12px">Jerusalem Chapel, Prayer Mountain</span></div>
+        <div class="detail-time">4:45–<br>6:30</div>
+        <div class="detail-text">Chapel Service with Pastor Kong<br><span style="color:var(--text-muted);font-size:12px">Jerusalem Chapel, Prayer Mountain</span></div>
       </div>
       <div class="detail-row">
-        <div class="detail-time">6:30 PM</div>
+        <div class="detail-time">6:30</div>
         <div class="detail-text">Buses depart to hotel</div>
       </div>
       <div class="detail-row">
-        <div class="detail-time">7:30 PM</div>
-        <div class="detail-text">Arrive at hotel · Dinner on your own · Free & easy</div>
+        <div class="detail-time">7:30</div>
+        <div class="detail-text">Arrive hotel · Dinner on your own · Free & easy</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ========== DAY 15 ========== -->
+<!-- DAY 15 -->
 <div class="content day-content hidden" data-day="15">
   <div class="day-header">
     <div class="day-number">15</div>
@@ -714,64 +577,39 @@
 
   <div class="event-block shared open" onclick="toggleBlock(this)">
     <div class="block-header">
-      <div class="block-time">3:30 AM</div>
+      <div class="block-time">3:30</div>
       <div class="block-title">YFGC Morning Prayer</div>
       <span class="block-badge badge-prayer">PRAYER</span>
       <span class="block-chevron">▾</span>
     </div>
     <div class="block-body">
-      <div class="detail-row">
-        <div class="detail-time">3:30 AM</div>
-        <div class="detail-text">Gather in assigned bus</div>
-      </div>
-      <div class="detail-row">
-        <div class="detail-time">3:45 AM</div>
-        <div class="detail-text">Buses depart to YFGC</div>
-      </div>
-      <div class="detail-row">
-        <div class="detail-time">4–6:15 AM</div>
-        <div class="detail-text">Early Morning Prayer Meeting</div>
-      </div>
-      <div class="detail-row">
-        <div class="detail-time">6:45 AM</div>
-        <div class="detail-text">Buses return to hotel</div>
-      </div>
+      <div class="period-label">AM</div>
+      <div class="detail-row"><div class="detail-time">3:30</div><div class="detail-text">Gather in assigned bus</div></div>
+      <div class="detail-row"><div class="detail-time">3:45</div><div class="detail-text">Buses depart to YFGC</div></div>
+      <div class="detail-row"><div class="detail-time">4:00–<br>6:15</div><div class="detail-text">Early Morning Prayer Meeting</div></div>
+      <div class="detail-row"><div class="detail-time">6:45</div><div class="detail-text">Buses return to hotel</div></div>
     </div>
   </div>
 
   <div class="event-block shared open" onclick="toggleBlock(this)">
     <div class="block-header">
-      <div class="block-time">9:30 AM</div>
+      <div class="block-time">9:30</div>
       <div class="block-title">Midweek Service + Lunch</div>
       <span class="block-badge badge-all">ALL</span>
       <span class="block-chevron">▾</span>
     </div>
     <div class="block-body">
-      <div class="detail-row">
-        <div class="detail-time">9:30 AM</div>
-        <div class="detail-text">Buses depart to YFGC</div>
-      </div>
-      <div class="detail-row">
-        <div class="detail-time">10–11:30</div>
-        <div class="detail-text">Midweek Service at YFGC with Pastor Kong</div>
-      </div>
-      <div class="detail-row">
-        <div class="detail-time">11:30 AM</div>
-        <div class="detail-text">Group photo outside church with Dr Younghoon Lee</div>
-      </div>
-      <div class="detail-row">
-        <div class="detail-time">12–2 PM</div>
-        <div class="detail-text">Welcome Lunch hosted by YFGC<br><span style="color:var(--text-muted);font-size:12px">The Partyum Yeouido</span></div>
-      </div>
-      <div class="detail-row">
-        <div class="detail-time">2:00 PM</div>
-        <div class="detail-text">Buses return to hotel · Free & easy rest of day</div>
-      </div>
+      <div class="period-label">AM → PM</div>
+      <div class="detail-row"><div class="detail-time">9:30</div><div class="detail-text">Buses depart to YFGC</div></div>
+      <div class="detail-row"><div class="detail-time">10:00–<br>11:30</div><div class="detail-text">Midweek Service with Pastor Kong</div></div>
+      <div class="detail-row"><div class="detail-time">11:30</div><div class="detail-text">Group photo with Dr Younghoon Lee</div></div>
+      <div class="detail-row"><div class="detail-time">12:00–<br>2:00</div><div class="detail-text">Welcome Lunch hosted by YFGC<br><span style="color:var(--text-muted);font-size:12px">The Partyum Yeouido</span></div></div>
+      <div class="detail-row"><div class="detail-time">2:00</div><div class="detail-text">Buses return to hotel · Free & easy rest of day</div></div>
     </div>
   </div>
 </div>
 
-<!-- ========== DAY 16 ========== -->
+<!-- DAY 16 -->
 <div class="content day-content hidden" data-day="16">
   <div class="day-header">
     <div class="day-number">16</div>
@@ -783,48 +621,35 @@
 
   <div class="event-block shared open" onclick="toggleBlock(this)">
     <div class="block-header">
-      <div class="block-time">3:30 AM</div>
+      <div class="block-time">3:30</div>
       <div class="block-title">YFGC Morning Prayer</div>
       <span class="block-badge badge-prayer">PRAYER</span>
       <span class="block-chevron">▾</span>
     </div>
     <div class="block-body">
-      <div class="detail-row">
-        <div class="detail-time">3:30 AM</div>
-        <div class="detail-text">Gather in assigned bus</div>
-      </div>
-      <div class="detail-row">
-        <div class="detail-time">3:45 AM</div>
-        <div class="detail-text">Buses depart to YFGC</div>
-      </div>
-      <div class="detail-row">
-        <div class="detail-time">4–6:15 AM</div>
-        <div class="detail-text">Early Morning Prayer Meeting</div>
-      </div>
-      <div class="detail-row">
-        <div class="detail-time">6:45 AM</div>
-        <div class="detail-text">Buses return to hotel</div>
-      </div>
+      <div class="period-label">AM</div>
+      <div class="detail-row"><div class="detail-time">3:30</div><div class="detail-text">Gather in assigned bus</div></div>
+      <div class="detail-row"><div class="detail-time">3:45</div><div class="detail-text">Buses depart to YFGC</div></div>
+      <div class="detail-row"><div class="detail-time">4:00–<br>6:15</div><div class="detail-text">Early Morning Prayer Meeting</div></div>
+      <div class="detail-row"><div class="detail-time">6:45</div><div class="detail-text">Buses return to hotel</div></div>
     </div>
   </div>
 
   <div class="event-block shared open" onclick="toggleBlock(this)">
     <div class="block-header">
-      <div class="block-time">After 7 AM</div>
+      <div class="block-time">After 7:00</div>
       <div class="block-title">Free & Easy</div>
       <span class="block-badge badge-all">ALL</span>
       <span class="block-chevron">▾</span>
     </div>
     <div class="block-body">
-      <div class="detail-row">
-        <div class="detail-time"></div>
-        <div class="detail-text">Rest of the day is free and easy. Explore Seoul on your own!</div>
-      </div>
+      <div class="period-label">AM onwards</div>
+      <div class="detail-row"><div class="detail-time"></div><div class="detail-text">Rest of the day is free and easy. Explore Seoul on your own!</div></div>
     </div>
   </div>
 </div>
 
-<!-- ========== DAY 17 ========== -->
+<!-- DAY 17 -->
 <div class="content day-content hidden" data-day="17">
   <div class="day-header">
     <div class="day-number">17</div>
@@ -836,28 +661,17 @@
 
   <div class="event-block shared open" onclick="toggleBlock(this)">
     <div class="block-header">
-      <div class="block-time">3:30 AM</div>
+      <div class="block-time">3:30</div>
       <div class="block-title">YFGC Morning Prayer</div>
       <span class="block-badge badge-prayer">PRAYER</span>
       <span class="block-chevron">▾</span>
     </div>
     <div class="block-body">
-      <div class="detail-row">
-        <div class="detail-time">3:30 AM</div>
-        <div class="detail-text">Gather in assigned bus</div>
-      </div>
-      <div class="detail-row">
-        <div class="detail-time">3:45 AM</div>
-        <div class="detail-text">Buses depart to YFGC</div>
-      </div>
-      <div class="detail-row">
-        <div class="detail-time">4–6:15 AM</div>
-        <div class="detail-text">Early Morning Prayer Meeting</div>
-      </div>
-      <div class="detail-row">
-        <div class="detail-time">6:45 AM</div>
-        <div class="detail-text">Buses return to hotel</div>
-      </div>
+      <div class="period-label">AM</div>
+      <div class="detail-row"><div class="detail-time">3:30</div><div class="detail-text">Gather in assigned bus</div></div>
+      <div class="detail-row"><div class="detail-time">3:45</div><div class="detail-text">Buses depart to YFGC</div></div>
+      <div class="detail-row"><div class="detail-time">4:00–<br>6:15</div><div class="detail-text">Early Morning Prayer Meeting</div></div>
+      <div class="detail-row"><div class="detail-time">6:45</div><div class="detail-text">Buses return to hotel</div></div>
     </div>
   </div>
 
@@ -866,21 +680,23 @@
     <div class="split-cols">
       <div class="split-col col-a">
         <div class="split-col-label a">Group A · Lunch</div>
-        <div class="split-item"><span class="split-item-time">11:30 AM</span><span>Buses depart Glad Yeouido</span></div>
-        <div class="split-item"><span class="split-item-time">12–2 PM</span><span>Farewell Lunch</span></div>
-        <div class="split-item"><span class="split-item-time">2:00 PM</span><span>Buses return to hotel</span></div>
+        <div class="split-period">AM → PM</div>
+        <div class="split-item"><span class="split-item-time">11:30</span><span>Buses depart Glad Yeouido</span></div>
+        <div class="split-item"><span class="split-item-time">12:00–<br>2:00</span><span>Farewell Lunch</span></div>
+        <div class="split-item"><span class="split-item-time">2:00</span><span>Buses return to hotel</span></div>
       </div>
       <div class="split-col col-b">
         <div class="split-col-label b">Group B · Dinner</div>
-        <div class="split-item"><span class="split-item-time">5:00 PM</span><span>Buses depart Glad Mapo</span></div>
-        <div class="split-item"><span class="split-item-time">5:30–7:30</span><span>Farewell Dinner</span></div>
-        <div class="split-item"><span class="split-item-time">7:30 PM</span><span>Buses return to hotel</span></div>
+        <div class="split-period">PM</div>
+        <div class="split-item"><span class="split-item-time">5:00</span><span>Buses depart Glad Mapo</span></div>
+        <div class="split-item"><span class="split-item-time">5:30–<br>7:30</span><span>Farewell Dinner</span></div>
+        <div class="split-item"><span class="split-item-time">7:30</span><span>Buses return to hotel</span></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ========== DAY 18 ========== -->
+<!-- DAY 18 -->
 <div class="content day-content hidden" data-day="18">
   <div class="day-header">
     <div class="day-number">18</div>
@@ -898,134 +714,78 @@
       <span class="block-chevron">▾</span>
     </div>
     <div class="block-body">
-      <div class="detail-row">
-        <div class="detail-time">Till 11 AM</div>
-        <div class="detail-text">Free & easy</div>
-      </div>
-      <div class="detail-row">
-        <div class="detail-time">11:00 AM</div>
-        <div class="detail-text">Check-out hotel</div>
-      </div>
-      <div class="detail-row">
-        <div class="detail-time">12:00 PM</div>
-        <div class="detail-text">Flight bundle passengers: gather at hotel lobby for airport transfer</div>
-      </div>
+      <div class="period-label">AM</div>
+      <div class="detail-row"><div class="detail-time">Till 11:00</div><div class="detail-text">Free & easy</div></div>
+      <div class="detail-row"><div class="detail-time">11:00</div><div class="detail-text">Check-out hotel</div></div>
+      <div class="detail-row"><div class="detail-time">12:00</div><div class="detail-text">Flight bundle passengers: gather at hotel lobby for airport transfer</div></div>
     </div>
   </div>
 </div>
 
-<!-- EMERGENCY -->
 <div class="emergency-banner">
   <h3>🆘 Emergency Numbers</h3>
-  <div class="emergency-row">
-    <span class="e-label">🚑 Ambulance</span>
-    <span class="e-num">119</span>
-  </div>
-  <div class="emergency-row">
-    <span class="e-label">🔥 Fire</span>
-    <span class="e-num">119</span>
-  </div>
-  <div class="emergency-row">
-    <span class="e-label">👮 Police</span>
-    <span class="e-num">112</span>
-  </div>
+  <div class="emergency-row"><span class="e-label">🚑 Ambulance</span><span class="e-num">119</span></div>
+  <div class="emergency-row"><span class="e-label">🔥 Fire</span><span class="e-num">119</span></div>
+  <div class="emergency-row"><span class="e-label">👮 Police</span><span class="e-num">112</span></div>
 </div>
 
-<!-- QUICK LINKS -->
-<div class="info-grid" id="info-grid-all">
-  <div class="info-card">
-    <div class="info-card-icon">🏥</div>
-    <div class="info-card-label">Clinic (A)</div>
-    <div class="info-card-val"><a href="https://naver.me/GsTjKUDO" style="color:var(--gold);text-decoration:none">Map ↗</a></div>
-  </div>
-  <div class="info-card">
-    <div class="info-card-icon">💊</div>
-    <div class="info-card-label">Pharmacy (A)</div>
-    <div class="info-card-val"><a href="https://naver.me/5JVHZN8d" style="color:var(--gold);text-decoration:none">Map ↗</a></div>
-  </div>
-  <div class="info-card">
-    <div class="info-card-icon">🏨</div>
-    <div class="info-card-label">Hospital</div>
-    <div class="info-card-val"><a href="https://naver.me/Gz517Ac9" style="color:var(--gold);text-decoration:none">Map ↗</a></div>
-  </div>
-  <div class="info-card">
-    <div class="info-card-icon">🏥</div>
-    <div class="info-card-label">Clinic (B)</div>
-    <div class="info-card-val"><a href="https://naver.me/FQ5qAr12" style="color:var(--gold);text-decoration:none">Map ↗</a></div>
-  </div>
-  <div class="info-card">
-    <div class="info-card-icon">💊</div>
-    <div class="info-card-label">Pharmacy (B)</div>
-    <div class="info-card-val"><a href="https://naver.me/FVbV5pJ1" style="color:var(--gold);text-decoration:none">Map ↗</a></div>
-  </div>
-  <div class="info-card">
-    <div class="info-card-icon">✝️</div>
-    <div class="info-card-label">YFGC</div>
-    <div class="info-card-val" style="font-size:11px;">Yeouido FGC</div>
-  </div>
+<div class="info-grid">
+  <div class="info-card"><div class="info-card-icon">🏥</div><div class="info-card-label">Clinic (A)</div><div class="info-card-val"><a href="https://naver.me/GsTjKUDO" style="color:var(--gold);text-decoration:none">Map ↗</a></div></div>
+  <div class="info-card"><div class="info-card-icon">💊</div><div class="info-card-label">Pharmacy (A)</div><div class="info-card-val"><a href="https://naver.me/5JVHZN8d" style="color:var(--gold);text-decoration:none">Map ↗</a></div></div>
+  <div class="info-card"><div class="info-card-icon">🏨</div><div class="info-card-label">Hospital</div><div class="info-card-val"><a href="https://naver.me/Gz517Ac9" style="color:var(--gold);text-decoration:none">Map ↗</a></div></div>
+  <div class="info-card"><div class="info-card-icon">🏥</div><div class="info-card-label">Clinic (B)</div><div class="info-card-val"><a href="https://naver.me/FQ5qAr12" style="color:var(--gold);text-decoration:none">Map ↗</a></div></div>
+  <div class="info-card"><div class="info-card-icon">💊</div><div class="info-card-label">Pharmacy (B)</div><div class="info-card-val"><a href="https://naver.me/FVbV5pJ1" style="color:var(--gold);text-decoration:none">Map ↗</a></div></div>
+  <div class="info-card"><div class="info-card-icon">✝️</div><div class="info-card-label">YFGC</div><div class="info-card-val" style="font-size:11px;">Yeouido FGC</div></div>
 </div>
 
 <div class="bottom-spacer"></div>
 
 <script>
   let currentGroup = 'all';
-  let currentDay = '12';
 
   function setGroup(g) {
     currentGroup = g;
-    document.querySelectorAll('.group-btn').forEach(b => {
-      b.classList.remove('active-A','active-B','all-active');
-    });
+    document.querySelectorAll('.group-btn').forEach(b => b.classList.remove('active-A','active-B','all-active'));
     const btn = document.querySelector(`.group-btn[data-group="${g}"]`);
     if (g === 'A') btn.classList.add('active-A');
     else if (g === 'B') btn.classList.add('active-B');
     else btn.classList.add('all-active');
 
-    // Hotel strip
     const hotelA = document.getElementById('hotel-a');
     const hotelB = document.getElementById('hotel-b');
     const hotelDiv = document.getElementById('hotel-divider');
     if (g === 'A') {
-      hotelA.classList.remove('hidden-hotel');
-      hotelB.classList.add('hidden-hotel');
-      hotelDiv.classList.add('hidden-hotel');
+      hotelA.classList.remove('hidden-hotel'); hotelB.classList.add('hidden-hotel'); hotelDiv.classList.add('hidden-hotel');
     } else if (g === 'B') {
-      hotelB.classList.remove('hidden-hotel');
-      hotelA.classList.add('hidden-hotel');
-      hotelDiv.classList.add('hidden-hotel');
+      hotelB.classList.remove('hidden-hotel'); hotelA.classList.add('hidden-hotel'); hotelDiv.classList.add('hidden-hotel');
     } else {
-      hotelA.classList.remove('hidden-hotel');
-      hotelB.classList.remove('hidden-hotel');
-      hotelDiv.classList.remove('hidden-hotel');
+      hotelA.classList.remove('hidden-hotel'); hotelB.classList.remove('hidden-hotel'); hotelDiv.classList.remove('hidden-hotel');
     }
-
     applyGroupFilter();
   }
 
   function applyGroupFilter() {
-    // Handle split blocks — hide the irrelevant column entirely
     document.querySelectorAll('.split-block').forEach(block => {
       const colA = block.querySelector('.col-a');
       const colB = block.querySelector('.col-b');
       const grid = block.querySelector('.split-cols');
       if (currentGroup === 'A') {
-        if (colA) colA.classList.remove('hidden-col');
-        if (colB) colB.classList.add('hidden-col');
-        if (grid) grid.classList.add('single-col');
+        colA && colA.classList.remove('hidden-col');
+        colB && colB.classList.add('hidden-col');
+        grid && grid.classList.add('single-col');
       } else if (currentGroup === 'B') {
-        if (colB) colB.classList.remove('hidden-col');
-        if (colA) colA.classList.add('hidden-col');
-        if (grid) grid.classList.add('single-col');
+        colB && colB.classList.remove('hidden-col');
+        colA && colA.classList.add('hidden-col');
+        grid && grid.classList.add('single-col');
       } else {
-        if (colA) colA.classList.remove('hidden-col');
-        if (colB) colB.classList.remove('hidden-col');
-        if (grid) grid.classList.remove('single-col');
+        colA && colA.classList.remove('hidden-col');
+        colB && colB.classList.remove('hidden-col');
+        grid && grid.classList.remove('single-col');
       }
     });
   }
 
   function setDay(d) {
-    currentDay = d;
     document.querySelectorAll('.day-chip').forEach(c => c.classList.remove('active'));
     document.querySelector(`.day-chip[data-day="${d}"]`).classList.add('active');
     document.querySelectorAll('.day-content').forEach(c => c.classList.add('hidden'));
@@ -1033,9 +793,7 @@
     if (target) {
       target.classList.remove('hidden');
       target.querySelectorAll('.event-block, .split-block').forEach((el, i) => {
-        el.style.animation = 'none';
-        el.offsetHeight;
-        el.style.animation = '';
+        el.style.animation = 'none'; el.offsetHeight; el.style.animation = '';
         el.style.animationDelay = (i * 0.07) + 's';
       });
     }
@@ -1043,11 +801,8 @@
     document.querySelector(`.day-chip[data-day="${d}"]`).scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
   }
 
-  function toggleBlock(el) {
-    el.classList.toggle('open');
-  }
+  function toggleBlock(el) { el.classList.toggle('open'); }
 
-  // Apply filter on load
   applyGroupFilter();
 </script>
 </body>
