@@ -7,20 +7,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --gold: #C9A84C;
-    --gold-light: #E8C97A;
-    --gold-dim: #8a6f32;
-    --bg: #0d0d12;
-    --bg2: #14141c;
-    --bg3: #1a1a26;
-    --surface: #1f1f2e;
-    --surface2: #252538;
-    --text: #f0ece0;
-    --text-muted: #9b9680;
-    --groupA: #4a90d9;
-    --groupB: #5cb85c;
+    --gold: #B8860B;
+    --gold-light: #DAA520;
+    --gold-dim: #c9a84c;
+    --bg: #f5f4f0;
+    --bg2: #eeede8;
+    --surface: #ffffff;
+    --surface2: #f9f8f5;
+    --border: #e2ddd5;
+    --text: #1a1a1a;
+    --text-muted: #7a7670;
+    --groupA: #2a7fd4;
+    --groupB: #2e9e4f;
     --radius: 12px;
-    --shadow: 0 4px 24px rgba(0,0,0,0.5);
+    --shadow: 0 2px 12px rgba(0,0,0,0.08);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,8 +35,8 @@
 
   /* HERO */
   .hero {
-    background: linear-gradient(160deg, #0d0d12 0%, #1a1228 50%, #0d0d12 100%);
-    border-bottom: 1px solid rgba(201,168,76,0.2);
+    background: linear-gradient(160deg, #1a1228 0%, #2a1f40 50%, #1a1228 100%);
+    border-bottom: 3px solid var(--gold-dim);
     padding: 36px 20px 28px;
     text-align: center;
     position: relative;
@@ -46,7 +46,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.08) 0%, transparent 70%);
+    background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.12) 0%, transparent 70%);
     pointer-events: none;
   }
   .hero-sub {
@@ -55,22 +55,22 @@
     font-size: 11px;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--gold-dim);
     margin-bottom: 10px;
   }
   .hero h1 {
     font-family: 'Cinzel', serif;
     font-size: 26px;
     font-weight: 700;
-    color: var(--text);
+    color: #f0ece0;
     letter-spacing: 1px;
     line-height: 1.2;
     margin-bottom: 4px;
   }
-  .hero h1 span { color: var(--gold); }
+  .hero h1 span { color: var(--gold-dim); }
   .hero-dates {
     font-size: 13px;
-    color: var(--text-muted);
+    color: #9b9680;
     letter-spacing: 2px;
     margin-top: 8px;
   }
@@ -83,7 +83,8 @@
     background: var(--surface);
     border-radius: 10px;
     padding: 4px;
-    border: 1px solid rgba(201,168,76,0.15);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
   }
   .group-btn {
     flex: 1;
@@ -102,17 +103,17 @@
   .group-btn.active-A {
     background: var(--groupA);
     color: #fff;
-    box-shadow: 0 2px 12px rgba(74,144,217,0.4);
+    box-shadow: 0 2px 12px rgba(42,127,212,0.35);
   }
   .group-btn.active-B {
     background: var(--groupB);
     color: #fff;
-    box-shadow: 0 2px 12px rgba(92,184,92,0.4);
+    box-shadow: 0 2px 12px rgba(46,158,79,0.35);
   }
   .group-btn.all-active {
     background: var(--gold);
-    color: var(--bg);
-    box-shadow: 0 2px 12px rgba(201,168,76,0.4);
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(184,134,11,0.35);
   }
 
   /* HOTEL CARD */
@@ -120,16 +121,20 @@
     margin: 16px 16px 0;
     background: var(--surface);
     border-radius: var(--radius);
-    border: 1px solid rgba(201,168,76,0.15);
+    border: 1px solid var(--border);
     padding: 14px 16px;
     display: flex;
     gap: 12px;
     align-items: stretch;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
   }
   .hotel-item {
     flex: 1;
     min-width: 0;
+    transition: all 0.3s ease;
   }
+  .hotel-item.hidden-hotel { display: none; }
   .hotel-label {
     font-size: 9px;
     letter-spacing: 2px;
@@ -152,7 +157,7 @@
   }
   .hotel-divider {
     width: 1px;
-    background: rgba(201,168,76,0.15);
+    background: var(--border);
     align-self: stretch;
   }
 
@@ -170,7 +175,7 @@
     padding: 8px 14px;
     border-radius: 20px;
     background: var(--surface);
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid var(--border);
     font-size: 12px;
     font-weight: 700;
     cursor: pointer;
@@ -178,12 +183,13 @@
     color: var(--text-muted);
     white-space: nowrap;
     letter-spacing: 0.5px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   }
   .day-chip.active {
     background: var(--gold);
-    color: var(--bg);
+    color: #fff;
     border-color: var(--gold);
-    box-shadow: 0 2px 10px rgba(201,168,76,0.3);
+    box-shadow: 0 2px 10px rgba(184,134,11,0.3);
   }
   .day-chip .chip-sub {
     font-size: 9px;
@@ -214,7 +220,7 @@
     font-weight: 700;
     color: var(--gold);
     line-height: 1;
-    opacity: 0.25;
+    opacity: 0.2;
     width: 48px;
     text-align: right;
     flex-shrink: 0;
@@ -237,20 +243,17 @@
     background: var(--surface);
     border-radius: var(--radius);
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
     animation: fadeUp 0.3s ease both;
   }
   @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(10px); }
+    from { opacity: 0; transform: translateY(8px); }
     to { opacity: 1; transform: translateY(0); }
   }
   .event-block.shared { border-left: 3px solid var(--gold-dim); }
   .event-block.groupA { border-left: 3px solid var(--groupA); }
   .event-block.groupB { border-left: 3px solid var(--groupB); }
-  .event-block.both {
-    border-left: none;
-    border-top: 2px solid rgba(201,168,76,0.3);
-  }
 
   .block-header {
     display: flex;
@@ -260,7 +263,9 @@
     cursor: pointer;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
+    background: var(--surface);
   }
+  .block-header:hover { background: var(--surface2); }
   .block-time {
     font-size: 13px;
     font-weight: 700;
@@ -283,10 +288,10 @@
     border-radius: 10px;
     flex-shrink: 0;
   }
-  .badge-A { background: rgba(74,144,217,0.2); color: var(--groupA); border: 1px solid rgba(74,144,217,0.3); }
-  .badge-B { background: rgba(92,184,92,0.2); color: var(--groupB); border: 1px solid rgba(92,184,92,0.3); }
-  .badge-all { background: rgba(201,168,76,0.15); color: var(--gold); border: 1px solid rgba(201,168,76,0.3); }
-  .badge-prayer { background: rgba(180,120,220,0.15); color: #c880f0; border: 1px solid rgba(180,120,220,0.3); }
+  .badge-A { background: rgba(42,127,212,0.12); color: var(--groupA); border: 1px solid rgba(42,127,212,0.25); }
+  .badge-B { background: rgba(46,158,79,0.12); color: var(--groupB); border: 1px solid rgba(46,158,79,0.25); }
+  .badge-all { background: rgba(184,134,11,0.1); color: var(--gold); border: 1px solid rgba(184,134,11,0.25); }
+  .badge-prayer { background: rgba(140,80,200,0.1); color: #7b44b8; border: 1px solid rgba(140,80,200,0.25); }
 
   .block-chevron {
     font-size: 11px;
@@ -299,7 +304,8 @@
   .block-body {
     display: none;
     padding: 0 14px 14px;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid var(--border);
+    background: var(--surface2);
   }
   .event-block.open .block-body { display: block; }
 
@@ -307,34 +313,37 @@
     display: flex;
     gap: 8px;
     align-items: flex-start;
-    padding: 6px 0;
+    padding: 7px 0;
     font-size: 13px;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
+    border-bottom: 1px solid var(--border);
   }
   .detail-row:last-child { border-bottom: none; }
   .detail-time {
-    color: var(--gold-dim);
+    color: var(--gold);
     font-size: 12px;
     min-width: 52px;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
     padding-top: 1px;
+    font-weight: 700;
   }
   .detail-text { color: var(--text); line-height: 1.4; }
   .detail-note {
     font-size: 11px;
-    color: #e87070;
+    color: #cc4444;
     margin-top: 2px;
     display: block;
+    font-weight: 700;
   }
 
-  /* SPLIT BLOCK (Group A / B side by side) */
+  /* SPLIT BLOCK */
   .split-block {
     background: var(--surface);
     border-radius: var(--radius);
     overflow: hidden;
-    border: 1px solid rgba(201,168,76,0.12);
-    border-top: 2px solid rgba(201,168,76,0.25);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--gold-dim);
+    box-shadow: var(--shadow);
     animation: fadeUp 0.3s ease both;
   }
   .split-header {
@@ -347,6 +356,7 @@
     display: flex;
     align-items: center;
     gap: 6px;
+    background: var(--surface2);
   }
   .split-header::before {
     content: '';
@@ -359,13 +369,25 @@
   .split-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    border-top: 1px solid var(--border);
+    transition: grid-template-columns 0.3s ease;
+  }
+  .split-cols.single-col {
+    grid-template-columns: 1fr;
   }
   .split-col {
     padding: 12px;
+    transition: all 0.3s ease;
   }
+  .split-col.hidden-col { display: none; }
   .split-col:first-child {
-    border-right: 1px solid rgba(255,255,255,0.06);
+    border-right: 1px solid var(--border);
+  }
+  .split-col.hidden-col + .split-col {
+    border-left: none;
+  }
+  .split-cols.single-col .split-col:first-child {
+    border-right: none;
   }
   .split-col-label {
     font-size: 9px;
@@ -398,21 +420,12 @@
     gap: 6px;
   }
   .split-item-time {
-    color: var(--gold-dim);
+    color: var(--gold);
     font-size: 11px;
     flex-shrink: 0;
     font-variant-numeric: tabular-nums;
     min-width: 44px;
-  }
-
-  /* SECTION LABEL */
-  .section-label {
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--text-muted);
     font-weight: 700;
-    padding: 4px 0 2px;
   }
 
   /* EMERGENCY & INFO */
@@ -426,8 +439,9 @@
     background: var(--surface);
     border-radius: var(--radius);
     padding: 12px;
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid var(--border);
     text-align: center;
+    box-shadow: var(--shadow);
   }
   .info-card-icon { font-size: 20px; margin-bottom: 6px; }
   .info-card-label { font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px; }
@@ -435,16 +449,17 @@
 
   .emergency-banner {
     margin: 0 16px 16px;
-    background: rgba(220,60,60,0.12);
-    border: 1px solid rgba(220,60,60,0.25);
+    background: #fff5f5;
+    border: 1px solid #ffcccc;
     border-radius: var(--radius);
     padding: 14px 16px;
+    box-shadow: var(--shadow);
   }
   .emergency-banner h3 {
     font-size: 10px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #e87070;
+    color: #cc3333;
     margin-bottom: 8px;
     font-weight: 700;
   }
@@ -455,12 +470,10 @@
   }
   .emergency-row:last-child { margin-bottom: 0; }
   .e-label { font-size: 13px; color: var(--text-muted); }
-  .e-num { font-size: 16px; font-weight: 700; color: #e87070; letter-spacing: 1px; }
+  .e-num { font-size: 16px; font-weight: 700; color: #cc3333; letter-spacing: 1px; }
 
-  /* HIDDEN utility */
   .hidden { display: none !important; }
 
-  /* FADE anim stagger */
   .event-block:nth-child(1) { animation-delay: 0.05s; }
   .event-block:nth-child(2) { animation-delay: 0.10s; }
   .event-block:nth-child(3) { animation-delay: 0.15s; }
@@ -468,7 +481,6 @@
   .event-block:nth-child(5) { animation-delay: 0.25s; }
   .split-block { animation-delay: 0.15s; }
 
-  /* Bottom safe area */
   .bottom-spacer { height: 40px; }
 </style>
 </head>
@@ -490,13 +502,13 @@
 
 <!-- HOTEL INFO -->
 <div class="hotel-strip">
-  <div class="hotel-item">
+  <div class="hotel-item" id="hotel-a">
     <div class="hotel-label a">Group A Hotel</div>
     <div class="hotel-name">Glad Yeouido</div>
     <div class="hotel-addr">16 Uisadang-Daero, Yeongdeungpo-gu, Seoul</div>
   </div>
-  <div class="hotel-divider"></div>
-  <div class="hotel-item">
+  <div class="hotel-divider" id="hotel-divider"></div>
+  <div class="hotel-item" id="hotel-b">
     <div class="hotel-label b">Group B Hotel</div>
     <div class="hotel-name">Glad Mapo</div>
     <div class="hotel-addr">92 Mapo-daero, Mapo-gu, Seoul</div>
@@ -552,7 +564,7 @@
     </div>
   </div>
 
-  <div class="event-block shared" onclick="toggleBlock(this)">
+  <div class="event-block shared open" onclick="toggleBlock(this)">
     <div class="block-header">
       <div class="block-time">3:30 AM</div>
       <div class="block-title">YFGC Morning Prayer</div>
@@ -582,13 +594,13 @@
   <div class="split-block">
     <div class="split-header">Welcome Meal</div>
     <div class="split-cols">
-      <div class="split-col">
+      <div class="split-col col-a">
         <div class="split-col-label a">Group A · Dinner</div>
         <div class="split-item"><span class="split-item-time">5:00 PM</span><span>Buses depart Glad Yeouido</span></div>
         <div class="split-item"><span class="split-item-time">5:30 PM</span><span>Welcome Dinner — Heukdon-Ga Restaurant</span></div>
         <div class="split-item"><span class="split-item-time">7:30 PM</span><span>Buses return to hotel</span></div>
       </div>
-      <div class="split-col">
+      <div class="split-col col-b">
         <div class="split-col-label b">Group B · Lunch</div>
         <div class="split-item"><span class="split-item-time">11:30 AM</span><span>Buses depart Glad Mapo</span></div>
         <div class="split-item"><span class="split-item-time">12–2 PM</span><span>Welcome Lunch — Heukdon-Ga Restaurant</span></div>
@@ -608,7 +620,7 @@
     </div>
   </div>
 
-  <div class="event-block shared" onclick="toggleBlock(this)">
+  <div class="event-block shared open" onclick="toggleBlock(this)">
     <div class="block-header">
       <div class="block-time">3:30 AM</div>
       <div class="block-title">YFGC Morning Prayer</div>
@@ -644,29 +656,29 @@
   <div class="split-block">
     <div class="split-header">Daytime Programme (split itinerary)</div>
     <div class="split-cols">
-      <div class="split-col">
+      <div class="split-col col-a">
         <div class="split-col-label a">Group A</div>
         <div class="split-item"><span class="split-item-time">9–11 AM</span><span>Prayer Mountain — Dr Yonggi Cho Memorial, Burial Site, Prayer Grottos</span></div>
-        <div class="split-item"><span class="split-item-time">11 AM–12:30</span><span>Lunch at Prayer Mountain Canteen</span></div>
+        <div class="split-item"><span class="split-item-time">11–12:30</span><span>Lunch at Prayer Mountain Canteen</span></div>
         <div class="split-item"><span class="split-item-time">12:30 PM</span><span>Buses depart to DMZ</span></div>
         <div class="split-item"><span class="split-item-time">1–1:20 PM</span><span>Corporate Prayer at Imjingak Park</span></div>
         <div class="split-item"><span class="split-item-time">1:30–3:30</span><span>DMZ Gondola → Camp Greaves → Imjingak Observatory</span></div>
         <div class="split-item"><span class="split-item-time">3:30–4 PM</span><span>Imjingak Peace Park</span></div>
         <div class="split-item"><span class="split-item-time">4–4:30 PM</span><span>Buses depart back to Prayer Mountain</span></div>
       </div>
-      <div class="split-col">
+      <div class="split-col col-b">
         <div class="split-col-label b">Group B</div>
         <div class="split-item"><span class="split-item-time">9–9:20 AM</span><span>Corporate Prayer at Imjingak Park</span></div>
         <div class="split-item"><span class="split-item-time">9:30–11:30</span><span>DMZ Gondola → Camp Greaves → Imjingak Observatory</span></div>
         <div class="split-item"><span class="split-item-time">11:30–12</span><span>Imjingak Peace Park</span></div>
         <div class="split-item"><span class="split-item-time">12:30 PM</span><span>Arrive at Osanri Choi-Jashil Prayer Mountain</span></div>
-        <div class="split-item"><span class="split-item-time">12:30–2 PM</span><span>Lunch at Prayer Mountain Canteen</span></div>
+        <div class="split-item"><span class="split-item-time">12:30–2</span><span>Lunch at Prayer Mountain Canteen</span></div>
         <div class="split-item"><span class="split-item-time">2–4:30 PM</span><span>Explore Prayer Mountain — Dr Yonggi Cho Memorial, Burial Site, Prayer Grottos</span></div>
       </div>
     </div>
   </div>
 
-  <div class="event-block shared" onclick="toggleBlock(this)">
+  <div class="event-block shared open" onclick="toggleBlock(this)">
     <div class="block-header">
       <div class="block-time">4:45 PM</div>
       <div class="block-title">Combined Chapel Service</div>
@@ -700,7 +712,7 @@
     </div>
   </div>
 
-  <div class="event-block shared" onclick="toggleBlock(this)">
+  <div class="event-block shared open" onclick="toggleBlock(this)">
     <div class="block-header">
       <div class="block-time">3:30 AM</div>
       <div class="block-title">YFGC Morning Prayer</div>
@@ -727,7 +739,7 @@
     </div>
   </div>
 
-  <div class="event-block shared" onclick="toggleBlock(this)">
+  <div class="event-block shared open" onclick="toggleBlock(this)">
     <div class="block-header">
       <div class="block-time">9:30 AM</div>
       <div class="block-title">Midweek Service + Lunch</div>
@@ -769,7 +781,7 @@
     </div>
   </div>
 
-  <div class="event-block shared" onclick="toggleBlock(this)">
+  <div class="event-block shared open" onclick="toggleBlock(this)">
     <div class="block-header">
       <div class="block-time">3:30 AM</div>
       <div class="block-title">YFGC Morning Prayer</div>
@@ -822,7 +834,7 @@
     </div>
   </div>
 
-  <div class="event-block shared" onclick="toggleBlock(this)">
+  <div class="event-block shared open" onclick="toggleBlock(this)">
     <div class="block-header">
       <div class="block-time">3:30 AM</div>
       <div class="block-title">YFGC Morning Prayer</div>
@@ -852,13 +864,13 @@
   <div class="split-block">
     <div class="split-header">Farewell Meal — K-Turtle Restaurant</div>
     <div class="split-cols">
-      <div class="split-col">
+      <div class="split-col col-a">
         <div class="split-col-label a">Group A · Lunch</div>
         <div class="split-item"><span class="split-item-time">11:30 AM</span><span>Buses depart Glad Yeouido</span></div>
         <div class="split-item"><span class="split-item-time">12–2 PM</span><span>Farewell Lunch</span></div>
         <div class="split-item"><span class="split-item-time">2:00 PM</span><span>Buses return to hotel</span></div>
       </div>
-      <div class="split-col">
+      <div class="split-col col-b">
         <div class="split-col-label b">Group B · Dinner</div>
         <div class="split-item"><span class="split-item-time">5:00 PM</span><span>Buses depart Glad Mapo</span></div>
         <div class="split-item"><span class="split-item-time">5:30–7:30</span><span>Farewell Dinner</span></div>
@@ -920,7 +932,7 @@
 </div>
 
 <!-- QUICK LINKS -->
-<div class="info-grid">
+<div class="info-grid" id="info-grid-all">
   <div class="info-card">
     <div class="info-card-icon">🏥</div>
     <div class="info-card-label">Clinic (A)</div>
@@ -968,39 +980,46 @@
     if (g === 'A') btn.classList.add('active-A');
     else if (g === 'B') btn.classList.add('active-B');
     else btn.classList.add('all-active');
+
+    // Hotel strip
+    const hotelA = document.getElementById('hotel-a');
+    const hotelB = document.getElementById('hotel-b');
+    const hotelDiv = document.getElementById('hotel-divider');
+    if (g === 'A') {
+      hotelA.classList.remove('hidden-hotel');
+      hotelB.classList.add('hidden-hotel');
+      hotelDiv.classList.add('hidden-hotel');
+    } else if (g === 'B') {
+      hotelB.classList.remove('hidden-hotel');
+      hotelA.classList.add('hidden-hotel');
+      hotelDiv.classList.add('hidden-hotel');
+    } else {
+      hotelA.classList.remove('hidden-hotel');
+      hotelB.classList.remove('hidden-hotel');
+      hotelDiv.classList.remove('hidden-hotel');
+    }
+
     applyGroupFilter();
   }
 
   function applyGroupFilter() {
-    document.querySelectorAll('.event-block, .split-block').forEach(el => {
-      if (currentGroup === 'all') {
-        el.classList.remove('hidden');
+    // Handle split blocks — hide the irrelevant column entirely
+    document.querySelectorAll('.split-block').forEach(block => {
+      const colA = block.querySelector('.col-a');
+      const colB = block.querySelector('.col-b');
+      const grid = block.querySelector('.split-cols');
+      if (currentGroup === 'A') {
+        if (colA) colA.classList.remove('hidden-col');
+        if (colB) colB.classList.add('hidden-col');
+        if (grid) grid.classList.add('single-col');
+      } else if (currentGroup === 'B') {
+        if (colB) colB.classList.remove('hidden-col');
+        if (colA) colA.classList.add('hidden-col');
+        if (grid) grid.classList.add('single-col');
       } else {
-        const isShared = el.classList.contains('shared') || el.classList.contains('both');
-        const isSplit = el.classList.contains('split-block');
-        if (isShared || isSplit) {
-          el.classList.remove('hidden');
-        } else if (el.classList.contains('groupA') && currentGroup !== 'A') {
-          el.classList.add('hidden');
-        } else if (el.classList.contains('groupB') && currentGroup !== 'B') {
-          el.classList.add('hidden');
-        } else {
-          el.classList.remove('hidden');
-        }
-      }
-
-      // For split blocks, toggle columns
-      if (el.classList.contains('split-block') && currentGroup !== 'all') {
-        const cols = el.querySelectorAll('.split-col');
-        cols.forEach(col => {
-          const label = col.querySelector('.split-col-label');
-          if (!label) return;
-          if (currentGroup === 'A' && label.classList.contains('b')) col.style.opacity = '0.35';
-          else if (currentGroup === 'B' && label.classList.contains('a')) col.style.opacity = '0.35';
-          else col.style.opacity = '1';
-        });
-      } else if (el.classList.contains('split-block')) {
-        el.querySelectorAll('.split-col').forEach(c => c.style.opacity = '1');
+        if (colA) colA.classList.remove('hidden-col');
+        if (colB) colB.classList.remove('hidden-col');
+        if (grid) grid.classList.remove('single-col');
       }
     });
   }
@@ -1013,7 +1032,6 @@
     const target = document.querySelector(`.day-content[data-day="${d}"]`);
     if (target) {
       target.classList.remove('hidden');
-      // Reset animations
       target.querySelectorAll('.event-block, .split-block').forEach((el, i) => {
         el.style.animation = 'none';
         el.offsetHeight;
@@ -1022,7 +1040,6 @@
       });
     }
     applyGroupFilter();
-    // Scroll day chip into view
     document.querySelector(`.day-chip[data-day="${d}"]`).scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
   }
 
@@ -1030,13 +1047,8 @@
     el.classList.toggle('open');
   }
 
-  // Auto-open first event block of each day
-  document.querySelectorAll('.day-content').forEach(day => {
-    const first = day.querySelector('.event-block');
-    if (first && !first.classList.contains('open')) {
-      // leave closed by default except day 12
-    }
-  });
+  // Apply filter on load
+  applyGroupFilter();
 </script>
 </body>
 </html>
